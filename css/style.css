@@ -1,223 +1,825 @@
-/* -------------------------------- 
 
-Primary style
+@font-face {
+    font-family: 'spiegelregular';
+    src: url('fonts/spiegel_tt_regular-webfont.eot');
+    src: url('fonts/spiegel_tt_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/spiegel_tt_regular-webfont.woff2') format('woff2'),
+         url('fonts/spiegel_tt_regular-webfont.woff') format('woff'),
+         url('fonts/spiegel_tt_regular-webfont.ttf') format('truetype'),
+         url('fonts/spiegel_tt_regular-webfont.svg#spiegelregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
--------------------------------- */
-*, *::after, *::before {
-  box-sizing: border-box;
 }
 
-html {
-  font-size: 62.5%;
+@font-face {
+    font-family: 'museo_for_dell100';
+    src: url('fonts/museofordell-100-webfont.eot');
+    src: url('fonts/museofordell-100-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museofordell-100-webfont.woff2') format('woff2'),
+         url('fonts/museofordell-100-webfont.woff') format('woff'),
+         url('fonts/museofordell-100-webfont.ttf') format('truetype'),
+         url('fonts/museofordell-100-webfont.svg#museo_for_dell100') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'museo_sans_for_dell300';
+    src: url('fonts/museosansfordell-300-webfont.eot');
+    src: url('fonts/museosansfordell-300-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museosansfordell-300-webfont.woff2') format('woff2'),
+         url('fonts/museosansfordell-300-webfont.woff') format('woff'),
+         url('fonts/museosansfordell-300-webfont.ttf') format('truetype'),
+         url('fonts/museosansfordell-300-webfont.svg#museo_sans_for_dell300') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'museo_sans_for_dell700';
+    src: url('fonts/museosansfordell-700-webfont.eot');
+    src: url('fonts/museosansfordell-700-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museosansfordell-700-webfont.woff2') format('woff2'),
+         url('fonts/museosansfordell-700-webfont.woff') format('woff'),
+         url('fonts/museosansfordell-700-webfont.ttf') format('truetype'),
+         url('fonts/museosansfordell-700-webfont.svg#museo_sans_for_dell700') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+a{
+	text-decoration:none;
+	color: #ffcb31;
+}
+table {
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+	font-weight: bold;
+}
+
+caption,th {
+    text-align: left;
+
+}
+
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
+
+html, body {
+	margin:0;
+	padding:0;
+	min-width: 1200px;
 }
 
 body {
-  font-size: 1.6rem;
-  font-family: "Open Sans", sans-serif;
-  color: #ffffff;
-  background-color: #22283f;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-body::before {
-  /* never visible - this is used in jQuery to check the current MQ */
-  content: 'mobile';
-  display: none;
-}
-@media only screen and (min-width: 1050px) {
-  body::before {
-    /* never visible - this is used in jQuery to check the current MQ */
-    content: 'desktop';
-  }
+	font-family: 'spiegelregular', Helvetica, Arial, sans-serif;
+	font-size:15px;
+	background:url(../img/bg.jpg) repeat-y;
+	color:#cacaca;
 }
 
-a {
-  color: #267481;
-  text-decoration: none;
+section {
+	position:relative;
 }
 
-/* -------------------------------- 
-
-Main Components 
-
--------------------------------- */
-@media only screen and (min-width: 1050px) {
-  body[data-hijacking="on"] {
-    overflow: hidden;
-  }
+table {
+	margin:20px 0;
 }
 
-.cd-section {
-}
-.cd-section div {
-  line-height: 100vh;
-  text-align: center;
-  font-size: 2.4rem;
-}
-/*.cd-section h2 {
-  line-height: 100vh;
-  text-align: center;
-  font-size: 2.4rem;
-}*/
-.cd-section:first-of-type > div {
-  background-color: #2b334f;
-}
-.cd-section:first-of-type > div::before {
-  /* alert -> all scrolling effects are not visible on small devices */
-  content: 'Effects not visible on mobile!';
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  top: 50px;
-  z-index: 2;
-  font-weight: bold;
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  color: #6a7083;
-}
-.cd-section:nth-of-type(2) > div {
-  background-color: #81151c;
-}
-.cd-section:nth-of-type(3) > div {
-  background-color: #f5f74b;
-}
-.cd-section:nth-of-type(4) > div {
-  background-color: #fbb53a;
-}
-.cd-section:nth-of-type(5) > div {
-  background-color: #a8a5a1;
-}
-[data-animation="parallax"] .cd-section > div, [data-animation="fixed"] .cd-section > div, [data-animation="opacity"] .cd-section > div {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-[data-animation="parallax"] .cd-section:first-of-type > div, [data-animation="fixed"] .cd-section:first-of-type > div, [data-animation="opacity"] .cd-section:first-of-type > div {
-  background-image: url("../img/img-1.jpg");
-}
-[data-animation="parallax"] .cd-section:nth-of-type(2) > div, [data-animation="fixed"] .cd-section:nth-of-type(2) > div, [data-animation="opacity"] .cd-section:nth-of-type(2) > div {
-  background-image: url("../img/img-2.jpg");
-}
-[data-animation="parallax"] .cd-section:nth-of-type(3) > div, [data-animation="fixed"] .cd-section:nth-of-type(3) > div, [data-animation="opacity"] .cd-section:nth-of-type(3) > div {
-  background-image: url("../img/img-3.jpg");
-}
-[data-animation="parallax"] .cd-section:nth-of-type(4) > div, [data-animation="fixed"] .cd-section:nth-of-type(4) > div, [data-animation="opacity"] .cd-section:nth-of-type(4) > div {
-  background-image: url("../img/img-4.jpg");
-}
-[data-animation="parallax"] .cd-section:nth-of-type(5) > div, [data-animation="fixed"] .cd-section:nth-of-type(5) > div, [data-animation="opacity"] .cd-section:nth-of-type(5) > div {
-  background-image: url("../img/img-5.jpg");
-}
-@media only screen and (min-width: 1050px) {
-  .cd-section h2 {
-    font-size: 4rem;
-    font-weight: 300;
-  }
-  [data-hijacking="on"] .cd-section {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-  [data-hijacking="on"] .cd-section > div {
-    visibility: visible;
-  }
-  [data-hijacking="off"] .cd-section > div {
-    opacity: 0;
-  }
-  [data-animation="rotate"] .cd-section {
-    /* enable a 3D-space for children elements */
-    -webkit-perspective: 1800px;
-    -moz-perspective: 1800px;
-    perspective: 1800px;
-  }
-  [data-hijacking="on"][data-animation="rotate"] .cd-section:not(:first-of-type) {
-    -webkit-perspective-origin: center 0;
-    -moz-perspective-origin: center 0;
-    perspective-origin: center 0;
-  }
-  [data-animation="scaleDown"] .cd-section > div, [data-animation="gallery"] .cd-section > div, [data-animation="catch"] .cd-section > div {
-    box-shadow: 0 0 0 rgba(25, 30, 46, 0.4);
-  }
-  [data-animation="opacity"] .cd-section.visible > div {
-    z-index: 1;
-  }
+/* Fixed header and footer.
+* --------------------------------------- */
+#header, #footer{
+	position:fixed;
+
+	display:block;
+	width: 100%;
+	z-index:9;
+	text-align:center;
+
 }
 
-@media only screen and (min-width: 1050px) {
-  .cd-section:first-of-type > div::before {
-    display: none;
-  }
-}
-@media only screen and (min-width: 1050px) {
-  .cd-section > div {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* Force Hardware Acceleration */
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  [data-hijacking="on"] .cd-section > div {
-    position: absolute;
-  }
-  [data-animation="rotate"] .cd-section > div {
-    -webkit-transform-origin: center bottom;
-    -moz-transform-origin: center bottom;
-    -ms-transform-origin: center bottom;
-    -o-transform-origin: center bottom;
-    transform-origin: center bottom;
-  }
+#header{
+	top:0px;
+	height: 47px;
 }
 
-.cd-vertical-nav {
-  /* lateral navigation */
-  position: fixed;
-  z-index: 1;
-  right: 3%;
-  top: 50%;
-  bottom: auto;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  display: none;
+.wrapper {
+	width:1120px;
+	margin:0 auto;
+	text-align:center;
 }
-.cd-vertical-nav a {
-  display: block;
-  height: 40px;
-  width: 40px;
-  /* image replace */
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-  background: url(../img/cd-icon-arrow.svg) no-repeat center center;
+
+.container {
+	position:relative;
+	background: url(../img/bg.jpg) center top no-repeat #000000;
+	min-height:1315px;
 }
-.cd-vertical-nav a.cd-prev {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
-  margin-bottom: 10px;
+
+h1.logo {
+	position:relative;
+	z-index:10;
+	margin:0 0 0 -10px;
+	float:left;
+	/*pointer-events:none;*/
+	outline: none;
+    height: 61px;
 }
-.cd-vertical-nav a.inactive {
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: opacity 0.2s 0s, visibility 0s 0.2s;
-  -moz-transition: opacity 0.2s 0s, visibility 0s 0.2s;
-  transition: opacity 0.2s 0s, visibility 0s 0.2s;
-}
-@media only screen and (min-width: 1050px) {
-  .cd-vertical-nav {
+
+h1.logo a {
+    background: url(../img/logo-gcg.png) no-repeat;
+    width: 372px;
+    height: 186px;
+    text-indent: -9999px;
     display: block;
-  }
+    overflow: hidden;
+    z-index: 999;
+    border-radius: 0 0 237px 237px;
+	overflow: hidden;
+}
+
+h2 {
+	font-family: 'museo_sans_for_dell700';
+	font-size:32px;
+	text-transform:uppercase;
+	margin:10px 0;
+}
+
+h3 {
+	font-size:25px;
+}
+
+h4 {
+	font-size:20px;
+	color:#ffcb31;
+}
+
+h5 {
+	font-family: 'museo_sans_for_dell700';
+	font-size:15px;
+}
+
+#blk-home {
+	background:url(../img/bg-home.jpg) repeat-y;
+}
+
+.menu {
+	margin:0;
+	padding:0;
+	float:left;
+}
+
+.menu-left {
+	margin:0 -24px 0 27px;
+}
+
+.menu-right {
+	margin:0 0 0 -24px;
+}
+
+.menu li {
+	float:left;
+	padding:0;
+	margin:0;
+	background:#cacaca;
+	width:126px;
+	box-shadow: 0px 1px 3px 0px #000000;
+	-moz-box-shadow: 0px 1px 3px 0px #000000;
+	-webkit-box-shadow: 0px 1px 3px 0px #000000;
+	position:relative;
+	list-style:none;
+}
+
+.menu li:nth-child(2) {
+	background:#000000;
+}
+
+.menu li a {
+	display:block;
+	color:#000000;
+	font-family: 'museo_sans_for_dell700';
+	text-transform:uppercase;
+	font-size:15px;
+	padding:15px 0;
+}
+
+.menu li:nth-child(2) a {
+	color:#cacaca;
+}
+
+.menu-left li {
+	-webkit-transform: skew(45deg);
+	-moz-transform: skew(45deg);
+	-o-transform: skew(45deg);
+}
+
+.menu-left li a {
+	-webkit-transform: skew(-45deg);
+	-moz-transform: skew(-45deg);
+	-o-transform: skew(-45deg);
+}
+
+.menu-right li {
+	-webkit-transform: skew(-45deg);
+	-moz-transform: skew(-45deg);
+	-o-transform: skew(-45deg);
+}
+
+.menu-right li a {
+	-webkit-transform: skew(45deg);
+	-moz-transform: skew(45deg);
+	-o-transform: skew(45deg);
+}
+
+.menu li:hover, .menu li.selected {
+	background:#ff0000;
+}
+
+.menu li:hover a, .menu li.selected a {
+	color:#FFFFFF;
+}
+
+.menu li ul {
+	position:absolute;
+	top:47px;
+	display:none;
+}
+
+.menu li:hover ul {
+	display:block;
+}
+
+.menu li ul.menu-about {
+	right:185px;
+}
+
+.menu li ul.menu-highlights {
+	left:191px;
+}
+
+.menu li ul.menu-tickets {
+	left:50px;
+}
+
+.menu li ul.menu-partners {
+	left:80px;
+}
+
+.menu li ul li, .menu li ul li:nth-child(2) {
+	background:#e61e26;
+}
+
+.menu li ul li a {
+	font-family: 'museo_for_dell100';
+	font-size:12px;
+	color:#FFFFFF !important;
+}
+
+.menu li ul li:hover, .menu li ul li.selected {
+	background:#a00000;
+}
+
+.menu-left li ul {
+	-webkit-transform: skew(-65deg);
+	-moz-transform: skew(-65deg);
+	-o-transform: skew(-65deg);
+}
+
+.menu-left li ul li {
+	-webkit-transform: skew(0deg);
+	-moz-transform: skew(0deg);
+	-o-transform: skew(0deg);
+}
+
+.menu-left li ul li a {
+	-webkit-transform: skew(50deg);
+	-moz-transform: skew(50deg);
+	-o-transform: skew(50deg);
+}
+
+.menu-right li ul {
+	-webkit-transform: skew(65deg);
+	-moz-transform: skew(65deg);
+	-o-transform: skew(65deg);
+}
+
+.menu-right li ul li {
+	-webkit-transform: skew(0deg);
+	-moz-transform: skew(0deg);
+	-o-transform: skew(0deg);
+}
+
+.menu-right li ul li a {
+	-webkit-transform: skew(-50deg);
+	-moz-transform: skew(-50deg);
+	-o-transform: skew(-50deg);
+}
+
+.left-right-bar-wrapper {
+	background: url(../img/left-right-bar.png) no-repeat;
+    width: 1920px;
+    height: 1038px;
+    position: absolute;
+    top: -20px;
+    left: -400px;
+    display: block;
+    z-index: 10;
+
+}
+
+.left-right-bar-wrapper img {
+	max-height:100%;
+}
+
+.backer {
+	display:block;
+	width:1920px;
+	height:1038px;
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:-1;
+}
+
+.backer:after {
+	display:block;
+	content:"";
+	width:1920px;
+	height:1038px;
+	position:absolute;
+	left:0;
+	top:0;
+	font:bold 14px/30px arial, sans-serif;
+	text-align:center;
+}
+
+
+area {
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+	display:block;
+}
+
+.watch:hover ~ .backer {background:url(../img/watch-hover.png);}
+.draw:hover ~ .backer {background:url(../img/draw-hover.png);}
+.ticket:hover ~ .backer {background:url(../img/ticket-hover.png);}
+.fb-1:hover ~ .backer {background:url(../img/fb-hover-1.png);}
+.fb-2:hover ~ .backer {background:url(../img/fb-hover-2.png);}
+.inst:hover ~ .backer {background:url(../img/inst-hover.png);}
+.yt:hover ~ .backer {background:url(../img/yt-hover.png);}
+
+.count {
+	font-size:11px;
+	text-transform:uppercase;
+	color:#45474a;
+	position:absolute;
+	text-align:center;
+}
+
+.fb {
+	top:265px;
+	right:555px;
+}
+
+.fb-count {
+	top:215px;
+	right:620px;
+}
+
+.inst-count {
+	top:265px;
+	right:670px;
+}
+
+.yt-count {
+	top:335px;
+	right:610px;
+}
+
+.fb-1:hover ~ .fb-count, .fb-2:hover ~ .fb, .inst:hover ~ .inst-count, .yt:hover ~ .yt-count {
+	color:#FFFFFF;
+}
+
+.count span {
+	display:block;
+	font-size:8px;
+}
+
+.logo-sponsor {
+	background:url(../img/logo-sponsor.png) no-repeat;
+	width:1130px;
+	height:569px;
+	position:absolute;
+	top:380px;
+	left:0;
+	right:0;
+	margin:0 auto;
+	z-index:10;
+}
+
+.inst-feed {
+	position:absolute;
+	top:0;
+	left:0;
+	background:rgba(0, 0, 0, 0.8);
+	width:265px;
+	height:100%;
+	z-index:100;
+	text-align:center;
+	color:#cacaca;
+}
+
+.inst-feed h2 {
+	margin-top:50px;
+	margin-bottom:0;
+}
+
+.inst-feed h3 {
+	text-transform:uppercase;
+	font-family: 'museo_for_dell100';
+	font-size:23px;
+	padding:0 55px;
+}
+
+.inst-feed p {
+	font-size:11px;
+	padding:10px 35px;
+}
+
+.btn-inst a {
+	background:url(../img/btn-inst.png) no-repeat;
+	width:164px;
+	height:27px;
+	display:block;
+	text-indent:-9999px;
+	margin:10px auto;
+}
+
+.banner-top {
+	width:1920px;
+	height:230px;
+	position:relative;
+	top:0;
+	left:0;
+}
+
+.banner-about {
+	background:url(../img/banner-about.jpg) no-repeat;
+}
+
+.banner-esports {
+	background:url(../img/banner-esports.jpg) no-repeat;
+}
+
+.banner-highlights {
+	background:url(../img/banner-highlights.jpg) no-repeat;
+}
+
+.banner-partners {
+	background:url(../img/banner-partners.jpg) no-repeat;
+}
+
+.banner-tickets {
+	background:url(../img/banner-tickets.jpg) no-repeat;
+}
+
+.content-wrapper {
+	width:1120px;
+	padding:25px 50px;
+	margin:0 auto;
+}
+
+.content {
+	padding:0 20px 0 0;
+	height:600px;
+	position:relative;
+	overflow:auto;
+}
+
+.content ul {
+	margin:0;
+	padding:15px 0 0 15px;
+}
+
+.content ul li {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+.content ul li:before {
+	content:"\25A0";
+	color:#FF0000;
+}
+
+.content ul li p {
+	margin:15px 0;
+}
+
+.content img {
+	max-width:100%;
+}
+
+.note {
+	color:#ffcb31;
+	font-style:italic;
+}
+
+.table-schedule {
+	width:100%;
+	font-family: 'museo_sans_for_dell300';
+	font-size:20px;
+	font-weight:bold;
+}
+
+.table-schedule tr td {
+	padding:15px 0;
+	border:1px solid rgba(216, 0, 9, 0.5);
+}
+
+.table-schedule tr td:nth-child(3) {
+	border:none;
+}
+
+.table-schedule tr td:first-child, .table-schedule tr td:nth-child(4) {
+	width:170px;
+	text-align:center;
+}
+
+.table-schedule tr td:nth-child(2), .table-schedule tr td:last-child {
+	width:300px;
+	padding:15px 25px;
+}
+
+.table-schedule tr:nth-child(odd) td:first-child, .table-schedule tr:nth-child(odd) td:nth-child(4) {
+	background:rgba(216, 0, 9, 0.7);
+}
+
+.table-schedule tr:nth-child(even) td:first-child, .table-schedule tr:nth-child(even) td:nth-child(4) {
+	background:rgba(216, 0, 9, 0.3);
+}
+
+.lol, .fo3, .apc {
+	position:relative;
+	margin:10px 0;
+}
+
+.btn-more-info {
+	background:url(../img/btn-more-info.png) no-repeat;
+    width: 139px;
+    height: 139px;
+    display: block;
+    text-indent: -9999px;
+    position: absolute;
+    left:380px;
+    bottom:15px;
+}
+
+.aza-profile {
+	width:320px;
+	position:absolute;
+}
+
+.aza-pic {
+	float:right;
+}
+
+.emcee table tr td {
+	vertical-align:top;
+}
+
+.emcee table tr td:first-child {
+	width:26%;
+}
+
+.emcee table tr td:last-child {
+	padding-bottom:20px;
+}
+
+.table-tickets {
+	width:100%;
+	font-family: 'museo_sans_for_dell300';
+	font-size:20px;
+	border-collapse:collapse;
+}
+
+.table-tickets tr td {
+	padding:15px 0;
+}
+
+.table-tickets tr th {
+	padding:15px 25px;
+}
+
+.table-tickets tr td, .table-tickets tr th {
+	border:1px solid rgba(216, 0, 9, 0.5);
+}
+
+.table-tickets tr:first-child td:last-child {
+	border:none;
+}
+
+.table-tickets tr td:first-child {
+	width:200px;
+	text-align:center;
+}
+
+.table-tickets tr td {
+	width:300px;
+	padding:15px 25px;
+}
+
+.table-tickets tr:nth-child(odd) th {
+	background:rgba(216, 0, 9, 0.7);
+}
+
+.table-tickets tr:nth-child(even) th {
+	background:rgba(216, 0, 9, 0.3);
+}
+
+.table-tickets tr:first-child th {
+	background:none;
+}
+
+#blk-faq ol {
+	margin:0;
+	padding:0 0 0 20px;
+	list-style-type:decimal;
+}
+
+#blk-faq ol li {
+	margin:0;
+	padding:10px 0;
+}
+
+#blk-faq ol li p {
+	margin:0;
+}
+
+#blk-faq ol li p span {
+	color:#e6a61e;
+}
+
+.table-partner tr th {
+	font-family: 'museo_sans_for_dell700';
+	font-size:15px;
+}
+
+.table-partner tr td {
+	vertical-align:middle;
+	padding:15px 0;
+}
+
+.table-partner tr td:first-child {
+	width:30%;
+}
+
+.table-partner tr:first-child td {
+	padding-top:0;
+}
+
+.table-partner tr td img {
+	vertical-align:middle;
+}
+
+.table-partner p {
+	margin-top:0;
+}
+
+.table-partner p strong {
+	color:#FFFFFF;
+}
+
+ul.sure-win {
+	background:url(../img/logo-sure-win.png) no-repeat;
+	font-size:16px;
+	margin:15px 0 0 0;
+	padding:60px 0 10px 500px;
+}
+
+ul.sure-win li:before {
+	content:"\25A0";
+	color:#FF0000;
+}
+
+.topup-promo {
+	margin:0;
+	padding:0 0 0 20px;
+	list-style-type:decimal;
+}
+
+.topup-promo li {
+	margin:0;
+	padding:0;
+	font-style:italic;
+}
+
+#footer {
+	padding:5px 0;
+	bottom:0px;
+	background:#212121;
+}
+
+#blk-footer {
+	width:1120px;
+	margin:0 auto;
+}
+
+#footer span {
+	font-size:14px;
+	color:#7F7F7F;
+	text-transform:uppercase;
+}
+
+#blk-footer img{ height: 25px; width: auto;}
+
+#logo-powered {
+	line-height:50px;
+}
+
+#logo-powered img {
+	margin-left:15px;
+	display:inline-block;
+	vertical-align:middle;
+}
+
+
+.one_half {
+	width:48%;
+}
+
+.float-left {
+	float:left;
+}
+
+.float-right {
+	float:right;
+}
+
+.align-center {
+	text-align:center;
+}
+
+.clearfix:after{
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.clearfix{
+	display:block;
+}
+/*  \*/
+.clearfix{
+	min-height:1%;
+}
+* html .clearfix{
+	height:1%;
+}
+@media (min-width: 960px){
+	#slider{}
+	.left-right-bar-wrapper {
+		left:-400px;
+	}
+}
+.logo-apc, .logo-kb, .logo-lc {
+	width: 120px;
+    height: 120px;
+    display: block;
+    float: left;
+	cursor: pointer;
+}
+
+.logo-apc {
+	margin: 229px 0 0 363px;
+}
+.logo-kb {
+	margin: 229px 0 0 175px;
+}
+.logo-lc {
+	margin: 0 0 0 506px;
 }

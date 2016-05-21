@@ -1,0 +1,83 @@
+
+@font-face {
+    font-family: 'olneylight';
+    src: url('fonts/olney_light-webfont.eot');
+    src: url('fonts/olney_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/olney_light-webfont.woff2') format('woff2'),
+         url('fonts/olney_light-webfont.woff') format('woff'),
+         url('fonts/olney_light-webfont.ttf') format('truetype'),
+         url('fonts/olney_light-webfont.svg#olneylight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+figure, figcaption {
+	display: block;
+}
+
+.transition {
+    -webkit-transition: top 400ms linear;
+    -moz-transition: top 400ms linear;
+    -ms-transition: top 400ms linear;
+    -o-transition: top 400ms linear;
+    transition: top 400ms linear;
+}
+
+.timeTo {
+	font-family: 'olneylight';
+	font-size: 40px;
+	line-height: 100%;
+	color:#FFFFFF;
+	position:absolute;
+	top:165px;
+	left:0;
+	right:0;
+	margin:0 auto;
+	text-align:center;
+}
+
+.timeTo span {
+	vertical-align: top;
+	display:none;
+}
+
+.timeTo figure {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+.timeTo figcaption {
+	text-align: center;
+	/*font-size: 12px;*/
+	line-height: 80%;
+	font-weight: normal;
+	color: #888;
+}
+
+.timeTo div {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	margin-right:15px;
+}
+
+.timeTo div.first {
+	margin-right:0;
+	margin-left:15px;
+}
+
+.timeTo ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: 3px;
+}
+
+.timeTo ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+	font-size:40px;
+}
