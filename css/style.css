@@ -1,0 +1,102 @@
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+	opacity:0;
+	-webkit-animation:fadeIn ease-in 1;
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
+}
+
+.fade-in.one {
+-webkit-animation-delay: 0s;
+-moz-animation-delay: 0.3s;
+animation-delay: 0.3s;
+}
+
+.fade-in.two {
+-webkit-animation-delay: 0.8s;
+-moz-animation-delay:0.8s;
+animation-delay: 0.8s;
+}
+
+.fade-in.three {
+-webkit-animation-delay: 1.6s;
+-moz-animation-delay: 1.6s;
+animation-delay: 1.6s;
+}
+
+/* INTRO AND MENU ******************************************************* */
+div.topline { background-color: #21b9b0; background-image: -moz-linear-gradient(270deg, #21b9b0 0%, #54606e 100%); background-image: -webkit-linear-gradient(270deg, #21b9b0 0%, #54606e 100%); background-image: -o-linear-gradient(270deg, #21b9b0 0%, #54606e 100%); background-image: -ms-linear-gradient(270deg, #21b9b0 0%, #54606e 100%); 
+background-image: linear-gradient(270deg, #21b9b0 0%, #54606e 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to', GradientType=1); height: 5px; }
+
+
+/* PARALLAX INFO ******************************************************* */
+.parallax [class*="section"] { position: relative; background-attachment: fixed; background-position: top center; background-size: cover; overflow: hidden; }
+
+.parallax [class*="section"]:nth-child(2n) { box-shadow: 0 0 3px rgba(0, 0, 0, 0.7); z-index: 2; position: relative; }
+
+.parallax .section1 { background-color: #54606e; background-image: -moz-linear-gradient(180deg, #54606e 0%, #21b9b0 100%); background-image: -webkit-linear-gradient(180deg, #54606e 0%, #21b9b0 100%); background-image: -o-linear-gradient(180deg, #54606e 0%, #21b9b0 100%); background-image: -ms-linear-gradient(180deg, #54606e 0%, #21b9b0 100%); background-image: linear-gradient(180deg, #54606e 0%, #21b9b0 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to', GradientType=1); }
+
+.parallax .section3 { background-color: #54606e; background-image: -moz-linear-gradient(180deg, #54606e 0%, #21b9b0 100%); background-image: -webkit-linear-gradient(180deg, #54606e 0%, #21b9b0 100%); background-image: -o-linear-gradient(180deg, #54606e 0%, #21b9b0 100%); background-image: -ms-linear-gradient(180deg, #54606e 0%, #21b9b0 100%); background-image: linear-gradient(180deg, #54606e 0%, #21b9b0 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to', GradientType=1); }
+
+.parallax .section4 { background: #fff; }
+
+.parallax .section5 { background-color: #54606e; background-image: -moz-linear-gradient(180deg, #54606e 0%, #21b9b0 100%); background-image: -webkit-linear-gradient(180deg, #54606e 0%, #21b9b0 100%); background-image: -o-linear-gradient(180deg, #54606e 0%, #21b9b0 100%); background-image: -ms-linear-gradient(180deg, #54606e 0%, #21b9b0 100%); background-image: linear-gradient(180deg, #54606e 0%, #21b9b0 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to', GradientType=1); padding-bottom: 20px !important; }
+
+/* GENERIC ******************************************************* */
+* { font-family: "Lato", sans-serif; color: #fff; }
+
+h1 { display: block; margin: 25px auto; color: #ea4f4f; font-size: 25px; text-transform: uppercase; text-align: center; font-weight: 400; }
+h1 span { color: #ea4f4f; font-size: 32px; vertical-align: middle; font-weight: 300; }
+
+h2 { display: block; margin: 20px auto; color: #696969; font-size: 17px; text-transform: uppercase; text-align: center; font-weight: 300; }
+h2 span { color: #696969; font-size: 32px; vertical-align: middle; font-weight: 300; }
+
+h3 { font-size: 17px; color: #696969; text-transform: uppercase; }
+h3 span { font-size: 17px; color: #fff; font-weight: light; text-transform: none; }
+
+h4 { display: block; margin: 10px; color: #696969; font-size: 17px; text-align: center; font-weight: 200; }
+h4:hover { color:#fff; }
+h4 span { color: #696969; font-size: 17px; text-align: center; font-weight: 200; }
+h4 span:hover { color: #696969; font-size: 17px; text-align: center; font-weight: 200; }
+
+h5 { display: block; padding:5px; margin: 5px; color: #fff; font-size: 15px; text-align: center; font-weight: 200; }
+h5 span { color: #696969; font-size: 32px; vertical-align: middle; font-weight: 300; }
+
+h6 { display: block; padding:5px; margin: 5px; color: #696969; font-size: 15px; text-align: center; font-weight: 200; }
+h6 span { color: #696969; font-size: 15px; font-weight: 400; }
+
+p { letter-spacing: 1px; line-height: 20px; }
+
+h2.div1 { color: #fff }
+
+h5.div1 { color:black }
+
+.rcorners {
+    border-radius: 10px;
+	}
+.rcorners:hover{
+	width:30%; height:30%;
+	}
+	
+.rcorners2 {
+    border-radius: 50px 15px;
+	}
+
+.rcorners3 {
+    border-radius: 15px;
+	}
+	
+.hover1:hover {background-color: #21b9b0; border-radius:5px;}
+
