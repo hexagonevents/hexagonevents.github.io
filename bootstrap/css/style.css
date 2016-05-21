@@ -38,7 +38,7 @@ body {
 	font-size:13px;
 	line-height:18px;
 	padding-bottom:0 !important;
-	background:#000011;
+	background:#001111;
 	color:#999;
 	letter-spacing:1px;
 }
@@ -203,7 +203,7 @@ p {
 }
 .nav li a {
 	height:50px;
-	color:#000111;
+	color:#001111;
 	padding:15px 15px 13px 15px;
 	transition:all 0.5s ease-out;
 	z-index:1000;
@@ -227,7 +227,7 @@ p {
 }
 .nav li a:hover {
 	color:#fff;
-	background:#000111;
+	background:#001111;
 }
 
 .navbar-fixed {
