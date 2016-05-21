@@ -12,6 +12,47 @@
 	
 </head>
 <body class="home-page">
+
+<header>
+
+<script type="text/javascript">
+if ( window.addEventListener ) {  
+  var state = 0, konami = [38,38,40,40,37,39,37,39,66,65];  
+  window.addEventListener("keydown", function(e) {  
+    if ( e.keyCode == konami[state] ) state++;  
+    else state = 0;  
+    if ( state == 10 )  
+      window.location = "http://syawlco.com/index.asp?p=/static/rick-rolled.html";  //you can write your own code here
+    }, true);  
+}  
+</script>
+	<div id="header" class="none">
+		<div class="container">
+			
+			<div class="col-xs-12 col-xm-12 col-md-12 col-lg-12 mobileView">
+				<button type="button" id="btnOffCanvas" class="btn btn-primary btn-xs visible-xs pull-right" data-toggle="offcanvas">‹</button>
+				<div class="navbar" data-offset-top="60" role="navigation"><!--data-spy="affix" 'put beside class'-->
+				        <div class="collapse navbar-collapse pull-left">
+					          <ul class="nav navbar-nav">
+							<li><a href="/#" style="border-radius:10px 0px 0px 0px;">Home</a></li>
+						        <li><a href="/#">HEXAGON Colosseum</a></li>
+							<li><a href="/#">Last Band Standing</a></li>
+							<li><a href="/#">The Great Escape</a></li>
+							<li><a href="/about.html">About</a></li>
+						 </ul>
+				        </div><!--/.nav-collapse -->
+					<div id="search" class="pull-right">
+						<form name="formSearch" method="post" action="/webshaper/store/searchProd.asp" class="form">
+							<input class="textbox" id="searchText" size="35" name="searchText" value="Search here" onblur="if(this.value=='') this.value='Search here';" onfocus="if(this.value=='Search here') this.value='';" />
+							<!--<input type="image" src="/theme/images/searchIcon.png" id="btnSearch" />-->
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+</header>
+
 <center>
 <p>HEXAGON Events Pre-website</p>
 
