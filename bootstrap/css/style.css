@@ -152,19 +152,6 @@ p {
 	padding-left:0;
 	padding-right:0;
 }
-#header a.searchIcon {
-	width:40px;
-	height:40px;
-	position:absolute;
-	right:22px;
-	z-index:999;
-	display:block;
-	background:#222 url(images/searchIcon.png) center center no-repeat;
-	border-radius:60px;
-}
-#header a.searchIcon span {
-	display:none;
-}
 
 #top {
 	background:#fff;
@@ -173,13 +160,7 @@ p {
 	padding-left:0 !important;
 	padding-right:0 !important;
 }
-#companyLogoImg {
-	/*position:absolute;
-	top:0;
-	left:50%;
-	margin-left:-88px;
-	z-index:1000;*/
-}
+
 .navbar {
 	width:100%;
 	margin-bottom:0px !important;
@@ -192,6 +173,13 @@ p {
 	padding-left:0;
 	z-index:1000;
 }
+
+.nav ul {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
 .nav li {
 	font:15px 'Oswald', Arial, Helvetica, sans-serif;
 	color:#555;
