@@ -185,7 +185,7 @@ p {
 	margin-bottom:0px !important;
 	border:none;
 	border-radius:0;
-	background:#fff;
+	background:#fff000;
 	border-radius:10px 10px 10px 10px;
 }
 .navbar-collapse {
@@ -4864,7 +4864,7 @@ table.tblPicLabels td:hover{
 		border:none!important;	
 	}
 	.navbar-toggle {
-        	background:#6c8aa2;
+        background:#001111;
 		margin-top:10px;
 		margin-right:5px !important;
 		border-radius:0 !important;
