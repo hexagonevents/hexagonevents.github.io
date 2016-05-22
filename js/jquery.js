@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 	$('#fullpage').fullpage({
-		anchors: ['home', 'about', 'schedule', 'how-to-go','contact', 'sub-events', 'highlights',  'emcee', 'promotions', 'partners', 'partners2' , 'partners3' , 'partners4'],
+		anchors: ['home', 'about', 'schedule', 'how-to-go','contact', 'sub-events', 'emcee', 'promotions', 'partners', 'partners2' , 'partners3' , 'partners4'],
 		css3: true
 	});
 	
