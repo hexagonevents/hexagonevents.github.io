@@ -271,11 +271,11 @@ h5 {
 }
 
 .menu li ul.menu-about {
-	right:185px;
+	right:85px;
 }
 
 .menu li ul.menu-highlights {
-	left:0px;
+	left:-30px;
 }
 
 .menu li ul.menu-tickets {
@@ -313,9 +313,9 @@ h5 {
 }
 
 .menu-left li ul li a {
-	-webkit-transform: skew(15deg);
-	-moz-transform: skew(15deg);
-	-o-transform: skew(15deg);
+	-webkit-transform: skew(0deg);
+	-moz-transform: skew(0deg);
+	-o-transform: skew(0deg);
 }
 
 .menu-right li ul {
@@ -331,9 +331,9 @@ h5 {
 }
 
 .menu-right li ul li a {
-	-webkit-transform: skew(-15deg);
-	-moz-transform: skew(-15deg);
-	-o-transform: skew(-15deg);
+	-webkit-transform: skew(-0deg);
+	-moz-transform: skew(-0deg);
+	-o-transform: skew(-0deg);
 }
 
 .left-right-bar-wrapper {
