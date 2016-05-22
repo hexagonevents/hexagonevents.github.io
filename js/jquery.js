@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 	$('#fullpage').fullpage({
-		anchors: ['home', 'about', 'schedule', 'how-to-go','contact', 'press-release', 'esports', 'highlights', 'lucky-draw', 'emcee', 'merchandise', 'rachta-lin', 'tickets', 'ticket-guide' , 'faq', 'partners', 'partners2' , 'partners3' , 'partners4' , 'promotions', 'promotions2', 'promotions3', 'promotions4', 'topup-promo'],
+		anchors: ['home', 'about', 'schedule', 'how-to-go','contact', 'sub-events', 'highlights',  'emcee', 'promotions', 'partners', 'partners2' , 'partners3' , 'partners4'],
 		css3: true
 	});
 	
