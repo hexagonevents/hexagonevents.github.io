@@ -301,9 +301,9 @@ h5 {
 }
 
 .menu-left li ul {
-	-webkit-transform: skew(-65deg);
-	-moz-transform: skew(-65deg);
-	-o-transform: skew(-65deg);
+	-webkit-transform: skew(-15deg);
+	-moz-transform: skew(-15deg);
+	-o-transform: skew(-15deg);
 }
 
 .menu-left li ul li {
@@ -313,15 +313,15 @@ h5 {
 }
 
 .menu-left li ul li a {
-	-webkit-transform: skew(50deg);
-	-moz-transform: skew(50deg);
-	-o-transform: skew(50deg);
+	-webkit-transform: skew(15deg);
+	-moz-transform: skew(15deg);
+	-o-transform: skew(15deg);
 }
 
 .menu-right li ul {
-	-webkit-transform: skew(65deg);
-	-moz-transform: skew(65deg);
-	-o-transform: skew(65deg);
+	-webkit-transform: skew(15deg);
+	-moz-transform: skew(15deg);
+	-o-transform: skew(15deg);
 }
 
 .menu-right li ul li {
@@ -331,9 +331,9 @@ h5 {
 }
 
 .menu-right li ul li a {
-	-webkit-transform: skew(-50deg);
-	-moz-transform: skew(-50deg);
-	-o-transform: skew(-50deg);
+	-webkit-transform: skew(-15deg);
+	-moz-transform: skew(-15deg);
+	-o-transform: skew(-15deg);
 }
 
 .left-right-bar-wrapper {
