@@ -229,27 +229,27 @@ h5 {
 }
 
 .menu-left li {
-	-webkit-transform: skew(45deg);
-	-moz-transform: skew(45deg);
-	-o-transform: skew(45deg);
+	-webkit-transform: skew(15deg);
+	-moz-transform: skew(15deg);
+	-o-transform: skew(15deg);
 }
 
 .menu-left li a {
-	-webkit-transform: skew(-45deg);
-	-moz-transform: skew(-45deg);
-	-o-transform: skew(-45deg);
+	-webkit-transform: skew(-15deg);
+	-moz-transform: skew(-15deg);
+	-o-transform: skew(-15deg);
 }
 
 .menu-right li {
-	-webkit-transform: skew(-45deg);
-	-moz-transform: skew(-45deg);
-	-o-transform: skew(-45deg);
+	-webkit-transform: skew(-15deg);
+	-moz-transform: skew(-15deg);
+	-o-transform: skew(-15deg);
 }
 
 .menu-right li a {
-	-webkit-transform: skew(45deg);
-	-moz-transform: skew(45deg);
-	-o-transform: skew(45deg);
+	-webkit-transform: skew(15deg);
+	-moz-transform: skew(15deg);
+	-o-transform: skew(15deg);
 }
 
 .menu li:hover, .menu li.selected {
