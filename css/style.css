@@ -99,7 +99,7 @@ html, body {
 }
 
 body {
-	font-family: 'spiegelregular', Helvetica, Arial, sans-serif;
+	font-family: 'Lato', Helvetica, Arial, sans-serif;
 	font-size:15px;
 	background:url(../img/bg.jpg) repeat-y;
 	color:#cacaca;
@@ -165,7 +165,7 @@ h1.logo a {
 }
 
 h2 {
-	font-family: 'museo_sans_for_dell700';
+	font-family: 'Lato';
 	font-size:32px;
 	text-transform:uppercase;
 	margin:10px 0;
@@ -181,7 +181,7 @@ h4 {
 }
 
 h5 {
-	font-family: 'museo_sans_for_dell700';
+	font-family: 'Lato';
 	font-size:15px;
 }
 
@@ -223,7 +223,7 @@ h5 {
 .menu li a {
 	display:block;
 	color:#000000;
-	font-family: 'museo_sans_for_dell700';
+	font-family: 'Lato';
 	text-transform:uppercase;
 	font-size:15px;
 	padding:15px 0;
@@ -296,7 +296,7 @@ h5 {
 }
 
 .menu li ul li a {
-	font-family: 'museo_for_dell100';
+	font-family: 'Lato';
 	font-size:12px;
 	color:#FFFFFF !important;
 }
@@ -464,7 +464,7 @@ area {
 
 .inst-feed h3 {
 	text-transform:uppercase;
-	font-family: 'museo_for_dell100';
+	font-family: 'Lato';
 	font-size:23px;
 	padding:0 55px;
 }
@@ -555,7 +555,7 @@ area {
 
 .table-schedule {
 	width:100%;
-	font-family: 'museo_sans_for_dell300';
+	font-family: 'Lato';
 	font-size:20px;
 	font-weight:bold;
 }
@@ -689,7 +689,7 @@ area {
 }
 
 .table-partner tr th {
-	font-family: 'museo_sans_for_dell700';
+	font-family: 'Lato';
 	font-size:15px;
 }
 
